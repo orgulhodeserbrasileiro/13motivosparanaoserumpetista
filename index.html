@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 Motivos Para Não Ser Um Petista | Ebook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark: #1d1d1f;
+            --light: #f5f5f7;
+            --accent: #c41e3a;
+            --accent-dark: #8b1426;
+            --gray: #86868b;
+            --red-bg: #c41e3a;
+            --red-dark: #8b1426;
+            --green-positive: #22c55e;
+            --green-positive-dark: #16a34a;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #0a3d0a 50%, #000000 100%);
+            background-attachment: fixed;
+            color: white;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(10, 61, 10, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(10, 61, 10, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 980px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 60px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .eyebrow {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 12px;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+
+        .subtitle {
+            font-size: clamp(21px, 3vw, 28px);
+            font-weight: 400;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            font-size: 17px;
+            font-weight: 500;
+            border: none;
+            border-radius: 980px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--green-positive);
+            color: white;
+            box-shadow: 0 8px 32px rgba(34, 197, 94, 0.3);
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: var(--green-positive-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(34, 197, 94, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            margin-top: 60px;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .hero-image img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.03) translateY(-5px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 20px;
+            background: transparent;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .section-subtitle {
+            font-size: 21px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-number {
+            font-size: 56px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .feature-description {
+            font-size: 17px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Preview Section */
+        .preview {
+            padding: 100px 20px;
+            background: transparent;
+            color: white;
+            text-align: center;
+        }
+
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 80px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .preview h2 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .preview p {
+            font-size: 21px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .topic-item {
+            padding: 32px 24px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .topic-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .topic-number {
+            font-size: 14px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .topic-title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* CTA Final */
+        .cta-final {
+            padding: 120px 20px;
+            background: transparent;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .cta-final-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 80px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-final h2 {
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .cta-final p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .price {
+            font-size: 21px;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        .price-value {
+            font-size: 72px;
+            font-weight: 800;
+            margin-bottom: 32px;
+        }
+
+        .btn-white {
+            background: var(--green-positive);
+            color: white;
+            padding: 20px 60px;
+            font-size: 19px;
+            font-weight: 600;
+            box-shadow: 0 10px 40px rgba(34, 197, 94, 0.4);
+        }
+
+        .btn-white:hover {
+            background: var(--green-positive-dark);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 50px rgba(34, 197, 94, 0.5);
+        }
+
+        .guarantee {
+            margin-top: 40px;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .subtitle {
+                font-size: 19px;
+            }
+
+            .features-grid,
+            .topics-grid,
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-container {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="eyebrow">Documento Informativo</div>
+            <h1>13 MOTIVOS PARA<br>NÃO SER UM <span style="color: #c41e3a;">PETISTA</span></h1>
+            <p class="subtitle">Uma análise crítica e fundamentada sobre o Partido dos Trabalhadores. Fatos, dados e contexto histórico que todo brasileiro precisa conhecer.</p>
+            
+            <div class="cta-container">
+                <a href="#comprar" class="btn btn-primary">Garanta Seu Ebook Agora</a>
+                <a href="#preview" class="btn btn-secondary">Ver Conteúdo</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='560' viewBox='0 0 400 560'%3E%3Crect fill='%23f5f5f7' width='400' height='560' rx='12'/%3E%3Crect fill='%23c41e3a' width='400' height='200' rx='12'/%3E%3Ctext x='200' y='120' font-family='Arial, sans-serif' font-size='72' font-weight='bold' fill='white' text-anchor='middle'%3E13%3C/text%3E%3Ctext x='200' y='160' font-family='Arial, sans-serif' font-size='24' fill='white' text-anchor='middle' font-weight='600'%3EMOTIVOS%3C/text%3E%3Ctext x='200' y='280' font-family='Arial, sans-serif' font-size='20' fill='%231d1d1f' text-anchor='middle' font-weight='600'%3EPARA NÃO SER%3C/text%3E%3Ctext x='200' y='315' font-family='Arial, sans-serif' font-size='32' fill='%231d1d1f' text-anchor='middle' font-weight='bold'%3EUM PETISTA%3C/text%3E%3C/svg%3E" alt="Capa do Ebook">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Por que este ebook?</h2>
+                <p class="section-subtitle">Informação baseada em fatos para uma decisão consciente</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-number">📊</div>
+                    <h3 class="feature-title">Dados Verificáveis</h3>
+                    <p class="feature-description">Todas as informações são baseadas em investigações oficiais, decisões judiciais e dados econômicos públicos.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-number">⚖️</div>
+                    <h3 class="feature-title">Análise Imparcial</h3>
+                    <p class="feature-description">Apresentação de fatos históricos sem manipulação, permitindo que você tire suas próprias conclusões.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-number">🎯</div>
+                    <h3 class="feature-title">Conteúdo Direto</h3>
+                    <p class="feature-description">13 motivos fundamentados com contexto histórico, consequências reais e dados específicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="preview" id="preview">
+        <div class="preview-container">
+            <h2>O que você vai descobrir</h2>
+            <p>Cada capítulo apresenta análise detalhada com fatos, números e contexto histórico</p>
+
+            <div class="topics-grid">
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 01</div>
+                    <div class="topic-title">Mensalão: Corrupção Sistêmica</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 02</div>
+                    <div class="topic-title">Petrolão: Maior Escândalo da História</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 03</div>
+                    <div class="topic-title">Crise Econômica 2014-2016</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 04</div>
+                    <div class="topic-title">Pedaladas Fiscais</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 05</div>
+                    <div class="topic-title">Aparelhamento do Estado</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 06</div>
+                    <div class="topic-title">Explosão da Dívida Pública</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 07</div>
+                    <div class="topic-title">Venezuela e Apoio a Ditaduras</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 08</div>
+                    <div class="topic-title">Destruição da Petrobras</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 09</div>
+                    <div class="topic-title">Ideologia nas Escolas</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 10</div>
+                    <div class="topic-title">Controle da Mídia</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 11</div>
+                    <div class="topic-title">Estelionato Eleitoral 2014</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 12</div>
+                    <div class="topic-title">Bolsa Família como Moeda Política</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-number">CAPÍTULO 13</div>
+                    <div class="topic-title">Ódio de Classe e Polarização</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final" id="comprar">
+        <div class="cta-final-content">
+            <h2>Vamos Salvar o Brasil!</h2>
+            <p>Tenha acesso completo ao ebook agora mesmo</p>
+            
+            <div class="price">Investimento único de apenas</div>
+            <div class="price-value">R$ 14,90</div>
+            
+            <a href="#" class="btn btn-white">Comprar Agora</a>
+            
+            <div class="guarantee">
+                🔒 Pagamento 100% Seguro | 📥 Download Imediato
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 13 Motivos Para Não Ser Um Petista. Todos os direitos reservados.</p>
+        <p style="margin-top: 8px;">Documento informativo baseado em fatos públicos e verificáveis.</p>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
